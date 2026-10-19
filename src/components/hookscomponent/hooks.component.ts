@@ -15,4 +15,12 @@ export class HooksComponent implements OnInit {
   ngOnInit(): void {
     console.log('OnInit: Me ejecuto después del constructor');
   }
+
+  ngDoCheck(): void {
+    console.log('DoCheck: Me ejecuto al cambair el render');
+  }
+
+  cambiarMensaje(): void {
+    this.mensaje = 'Y mañana martes!!!';
+  }
 }
