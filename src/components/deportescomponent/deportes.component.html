@@ -1,0 +1,30 @@
+<h1>Directivas Deportes component</h1>
+<h2>Número de deportes: {{ sports.length }}</h2>
+ 
+@if (sports.length < 4) {
+    <h2 style="color: green">
+        Tenemos menos de 4 deportes...
+    </h2>
+} @else {
+        <h2 style="color: red">
+            Tenemos más de 4 deportes
+        </h2>
+    }
+ 
+    <ul>
+        @for (deporte of sports; track deporte; let i = $index) {
+            <li style="color: fuchsia;">
+                {{i}} - {{deporte}}
+            </li>
+        }@empty {
+            <h2 style="color: red;">Sin deportes</h2>
+        }
+    </ul>
+ 
+    <h1 style="color: blue">
+        Esto es una plantilla HTML con
+        mucho código...
+    </h1>
+
+
+    
