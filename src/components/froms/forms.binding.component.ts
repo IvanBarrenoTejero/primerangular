@@ -1,25 +1,22 @@
+
 import { Component } from "@angular/core";
-
 @Component({
-    selector: "app-froms-binding",
+    selector: "app-forms-binding",
     standalone: false,
-    templateUrl: "./froms.binding.component.html",
+    templateUrl: './froms.binding.component.html'
 })
-
 export class FormsBindingComponent {
     public user: any;
     public mensaje: string;
-
     constructor() {
         this.mensaje = "";
         this.user = {
             nombre: "",
-            apellido: "",
-            edad: 0,
+            apellidos: "",
+            edad: 0
         }
     }
-
-    recibirDatos(datos: any) {
-        this.user = "Datos recibidos!!!"
+    recibirDatos(): void {
+        this.mensaje = "Datos recibidos!!!";
     }
 }
