@@ -1,0 +1,16 @@
+<h1>tabla-multiplicar-component</h1>
+<form #multiplicarform="ngForm" (ngSubmit)="calcularTablaMultiplicar()">
+    <label>Numero:</label>
+    <input type="number" #cajaNumero><br/>
+    <button>Calcular</button>
+</form>
+
+<ul>
+    @for (resultado of tabla; track resultado; let i = $index) {
+        <li style="color: fuchsia;">
+            {{i}} - {{resultado}}
+        </li>
+    }@empty {
+        <h2 style="color: red;">Sin resultados</h2>
+    }
+</ul>

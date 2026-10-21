@@ -1,1 +1,17 @@
-<h1> Hola </h1>
+<h1> Forms binding </h1>
+<h3>{{mensaje}}</h3>
+<form #formuser="ngForm" (ngSubmit)="recibirDatos()">
+    <label>Nombre: </label>
+    <input type="text" [(ngModel)]="user.nombre" #cajanombre="ngModel" name="cajaenombre"/><br/>
+    <label>Apellido: </label>
+    <input type="text" [(ngModel)]="user.apellidos" #cajaApellido="ngModel" name="cajapellido"/><br/>
+    <label>Edad: </label>
+    <input type="number" [(ngModel)]="user.edad" #cajaEdad="ngModel"  name="cajaedad"/><br/>
+    <button type="submit">Enviar</button>
+</form>
+
+<h2 style="color: blue;">
+    Nombre: {{user.nombre}} <br/>
+    Apellido: {{user.apellidos}} <br/>
+    Edad: {{user.edad}} <br/>
+</h2>
